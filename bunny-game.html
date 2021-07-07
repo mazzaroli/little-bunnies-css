@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
         body {
+            background: slategray;
             margin: 0;
             width: 100%;
             height: 100vh;
@@ -22,6 +23,12 @@
             background: #ccefff;
             box-shadow: 0 19px 38px rgb(0, 0, 0, 0.4), 0 15px 12px rgb(0, 0, 0, 0.22);
         }
+
+        .top--border {
+            border-radius: 10px 10px 0 0;
+
+        }
+
         .layer-1 {
             position: absolute;
             z-index: 1;
@@ -45,7 +52,8 @@
             z-index: 3;
             width: 200px;
             height: 400px;
-            background: brown;
+            background: #bf624c;
+            box-shadow: 0 19px 38px rgb(0, 0, 0, 0.4), 0 15px 12px rgb(0, 0, 0, 0.22);
             bottom: 0;
             left: 0;
             right: 0;
@@ -65,7 +73,8 @@
             z-index: 5;
             width: 200px;
             height: 300px;
-            background: blue;
+            background: #bf624c;
+            box-shadow: 0 19px 38px rgb(0, 0, 0, 0.4), 0 15px 12px rgb(0, 0, 0, 0.22);
             bottom: 0;
             left: 0;
             right: 0;
@@ -83,7 +92,8 @@
             z-index: 7;
             width: 200px;
             height: 200px;
-            background: chocolate;
+            background: #bf624c;
+            box-shadow: 0 19px 38px rgb(0, 0, 0, 0.4), 0 15px 12px rgb(0, 0, 0, 0.22);
             bottom: 0;
             right: 0;
         }
@@ -92,7 +102,7 @@
             z-index: 8;
             width: 200px;
             height: 125px;
-            background: green;
+            background: #51af5e;
             bottom: 0;
             left: 0;
             right: 0;
@@ -103,7 +113,7 @@
             z-index: 9;
             width: 125px;
             height: 100px;
-            background: fuchsia;
+            /* background: fuchsia; */
             bottom: 0;
             left: 0;
         }
@@ -112,7 +122,7 @@
             z-index: 10;
             width: 125px;
             height: 100px;
-            background: aqua;
+            /* background:tomato; */
             bottom: 0;
             right: 0;
         }
@@ -178,8 +188,90 @@
         .head__eye.head__eye--right {
             right: 20px;
         }
-            
-            
+        .lawn {
+            background: #51af5e;
+            height: 20px;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+
+        }
+        
+        .land {
+            background: 
+                linear-gradient(135deg, #51af5e 25%, transparent 25%) -50px 0, 
+                linear-gradient( -135deg, #51af5e 25%, transparent 25%) -50px 0, 
+                linear-gradient( 45deg, #bf624c 25%, transparent 25%), 
+                linear-gradient( -45deg, transparent 25%, #a54a38 25%);
+            background-size: 33px 30px;
+            height: 30px;
+            width: 100%;
+        }
+        .layer-8__left-lawn {
+            position: absolute;
+            width: 80px;
+            height: 70%;
+            border-radius: 40px 40px 0 0;
+            background-color: green;
+            bottom: 0;
+
+        }
+        .layer-8__center-lawn {
+            position: absolute;
+            width: 80px;
+            height: 100%;
+            border-radius: 40px 40px 0 0;
+            background-color: green;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .layer-8__right-lawn {
+            position: absolute;
+            width: 80px;
+            height: 80%;
+            border-radius: 40px 40px 0 0;
+            background-color: green;
+            bottom: 0;
+            right: 0;
+        }
+        .layer-9__left-cloud {
+            position: absolute;
+            width: 80px;
+            height: 100%;
+            border-radius: 40px 40px 0 33px;
+            background: white;
+            bottom: 0;
+            left: 0;
+        }
+        .layer-9__right-cloud {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            border-radius: 0 40px 30px 0;
+            background: white;
+            bottom: 0;
+            right: 5px;
+        }
+        .layer-10__right-cloud {
+            position: absolute;
+            width: 80px;
+            height: 100%;
+            border-radius: 40px 40px 33px 0;
+            background: white;
+            bottom: 0;
+            right: 0;
+        }
+        .layer-10__left-cloud {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            border-radius: 40px 0 0 30px;
+            background: white;
+            bottom: 0;
+            left: 5px;
+        }
+        
 
     </style>
 </head>
@@ -195,6 +287,7 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>   <!-- bunny 1 -->
+
         <div class="layer layer-2">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -205,7 +298,12 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>   <!-- bunny 2 -->
-        <div class="layer layer-3"></div>   <!-- wall 1 -->
+
+        <div class="top--border layer-3">
+            <div class="top--border lawn"></div>
+            <div class="land"></div>
+        </div>   <!-- wall 1 -->
+
         <div class="layer layer-4">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -216,7 +314,12 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>   <!-- bunny 3 -->
-        <div class="layer layer-5"></div>   <!-- wall 2 -->
+
+        <div class="top--border layer-5">
+            <div class="top--border lawn"></div>
+            <div class="land"></div>
+        </div>   <!-- wall 2 -->
+
         <div class="layer layer-6">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -227,10 +330,25 @@
                 <div class="head__eye head__eye--right"></div>
             </div>
         </div>   <!-- bunny 4 -->
-        <div class="layer layer-7"></div>   <!-- wall 3 -->
-        <div class="layer layer-8"></div>   <!-- arbusto 1 -->
-        <div class="layer layer-9"></div>   <!-- arbusto 2 -->
-        <div class="layer layer-10"></div>   <!-- arbusto 3 -->
+
+        <div class="top--border layer-7">
+            <div class="top--border lawn"></div>
+            <div class="land"></div>
+        </div>   <!-- wall 3 -->
+
+        <div class="layer layer-8">
+            <div class="layer-8__left-lawn"></div>
+            <div class="layer-8__center-lawn"></div>
+            <div class="layer-8__right-lawn"></div>
+        </div>   <!-- arbusto 1 -->
+        <div class="layer layer-9">
+            <div class="layer-9__right-cloud"></div>
+            <div class="layer-9__left-cloud"></div>
+        </div>   <!-- arbusto 2 -->
+        <div class="layer layer-10">
+            <div class="layer-10__right-cloud"></div>
+            <div class="layer-10__left-cloud"></div>
+        </div>   <!-- arbusto 3 -->
     </div>
 </body>
 </html>
